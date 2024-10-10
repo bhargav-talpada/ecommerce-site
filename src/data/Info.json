@@ -1,0 +1,16 @@
+{
+    "Admin" : [
+        {
+            "id" : 1,
+            "email" : "bhargav@gmail.com",
+            "password" : "bhargav123",
+            "name" : "bhargav"
+        },
+        {
+            "id" : 2,
+            "email" : "admin@gmail.com",
+            "password" : "admin",
+            "name" : "admin"
+        }
+    ]
+}
