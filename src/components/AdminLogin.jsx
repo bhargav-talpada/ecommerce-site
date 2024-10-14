@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { VscEye, VscEyeClosed } from 'react-icons/vsc';
 function AdminLogin() {
-off
+  
   const [name, setName] = useState('')
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
