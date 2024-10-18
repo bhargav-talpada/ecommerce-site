@@ -12,5 +12,19 @@
             "password" : "admin",
             "name" : "admin"
         }
+    ],
+    "User" : [
+        {
+            "id" : 1,
+            "email" : "bharga1144v@gmail.com",
+            "password" : "bhargav1144",
+            "name" : "bhargav"
+        },
+        {
+            "id" : 2,
+            "email" : "user123@gmail.com",
+            "password" : "user123",
+            "name" : "admin"
+        }
     ]
 }
