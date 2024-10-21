@@ -11,20 +11,20 @@
       "name": "Admin",
       "email": "admin@gmail.com",
       "password": "admin123"
+    },
+    {
+      "id": "69c9",
+      "name": "roank",
+      "email": "ronak@gmail.com",
+      "password": "ronak2010"
     }
   ],
   "User": [
     {
-      "id": "1",
-      "email": "bharga1144v@gmail.com",
-      "password": "bhargav1144",
-      "name": "bhargav"
-    },
-    {
-      "id": "2",
-      "email": "user123@gmail.com",
-      "password": "user123",
-      "name": "admin"
+      "id": "dd1b",
+      "name": "bhargav",
+      "email": "bhargav@gmail.com",
+      "password": "bhargav123"
     }
   ]
 }

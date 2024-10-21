@@ -30,34 +30,35 @@ function AdminLogin() {
     let json = await data.json();
     setAdmin(json);
   }
-  // console.log(admin);
 
-    const handleButtonClick = () => {  
-      if(!isSignInForm){
-        // SignUp Login
-        axios.post('http://localhost:8000/Admin',data)
-          .then((res)=>{
-            console.log(res);
-            alert("Admin Creates Sucessfull")
-          })
-          .catch((err)=>{
-            console.log(err);
-            alert("Invalid Data ")            
+  let data = {name, email, password};
+
+  const handleButtonClick = () => {  
+    if(!isSignInForm){
+      // Admin SignUp
+      axios.post('http://localhost:8000/Admin',data)
+        .then((res)=>{
+          console.log(res);
+          alert("Admin Creates Sucessfull")
         })
+        .catch((err)=>{
+          console.log(err);
+          alert("Invalid Data ")            
+      })
+    }
+    else{
+      // Admin SignIn
+      let login = admin.filter((x) => {
+        return (x.email == email, x.password == password)
+      })
+      if(login.length > 0){
+        alert('Login Successfully...');
       }
       else{
-        // SignIn Login
-        let login = admin.filter((x) => {
-          return (x.email == email, x.password == password)
-        })
-        if(login.length > 0){
-          alert('Login Successfully...');
-        }
-        else{
-          alert('Something went wrong...');
-        }
+        alert('Something went wrong...');
       }
-    };
+    }
+  };
 
   return (
     <div className='w-full h-screen flex justify-center items-center bg-[url("https://wallpapercave.com/wp/wp2939910.jpg")] bg-no-repeat bg-cover bg-center'>
