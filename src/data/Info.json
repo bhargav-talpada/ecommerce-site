@@ -1,30 +1,30 @@
 {
-    "Admin" : [
-        {
-            "id" : 1,
-            "email" : "bhargav@gmail.com",
-            "password" : "bhargav123",
-            "name" : "bhargav"
-        },
-        {
-            "id" : 2,
-            "email" : "admin@gmail.com",
-            "password" : "admin",
-            "name" : "admin"
-        }
-    ],
-    "User" : [
-        {
-            "id" : 1,
-            "email" : "bharga1144v@gmail.com",
-            "password" : "bhargav1144",
-            "name" : "bhargav"
-        },
-        {
-            "id" : 2,
-            "email" : "user123@gmail.com",
-            "password" : "user123",
-            "name" : "admin"
-        }
-    ]
+  "Admin": [
+    {
+      "id": "1a7c",
+      "name": "bhargav",
+      "email": "bhargav@gmail.com",
+      "password": "bhargav1144"
+    },
+    {
+      "id": "457a",
+      "name": "Admin",
+      "email": "admin@gmail.com",
+      "password": "admin123"
+    }
+  ],
+  "User": [
+    {
+      "id": "1",
+      "email": "bharga1144v@gmail.com",
+      "password": "bhargav1144",
+      "name": "bhargav"
+    },
+    {
+      "id": "2",
+      "email": "user123@gmail.com",
+      "password": "user123",
+      "name": "admin"
+    }
+  ]
 }

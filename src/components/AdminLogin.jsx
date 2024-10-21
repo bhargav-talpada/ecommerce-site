@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { VscEye, VscEyeClosed } from 'react-icons/vsc';
 function AdminLogin() {
@@ -30,28 +31,43 @@ function AdminLogin() {
     setAdmin(json);
   }
   // console.log(admin);
-  
-  const isLogin = () => {
-    let login = admin.filter((x) => {
-      return (x.email == email, x.password == password)
-    })
-    if(login.length > 0){
-      alert('Login Successfully...');
-    }
-    else{
-      alert('Something went wrong...');
-    }
-  }
+
+    const handleButtonClick = () => {  
+      if(!isSignInForm){
+        // SignUp Login
+        axios.post('http://localhost:8000/Admin',data)
+          .then((res)=>{
+            console.log(res);
+            alert("Admin Creates Sucessfull")
+          })
+          .catch((err)=>{
+            console.log(err);
+            alert("Invalid Data ")            
+        })
+      }
+      else{
+        // SignIn Login
+        let login = admin.filter((x) => {
+          return (x.email == email, x.password == password)
+        })
+        if(login.length > 0){
+          alert('Login Successfully...');
+        }
+        else{
+          alert('Something went wrong...');
+        }
+      }
+    };
 
   return (
     <div className='w-full h-screen flex justify-center items-center bg-[url("https://wallpapercave.com/wp/wp2939910.jpg")] bg-no-repeat bg-cover bg-center'>
-      <form onSubmit={(e) => e.preventDefault()} className="p-12 sm:w-1/2 md:w-3/12 h-[500px] text-white bg-black bg-opacity-50 rounded-lg flex flex-col justify-center items-center">
+      <form className="p-12 sm:w-1/2 md:w-3/12 h-[500px] text-white bg-black bg-opacity-50 rounded-lg flex flex-col justify-center items-center">
         <h1 className="font-bold text-3xl py-4 mr-auto">Admin { isSignInForm ? "Sign In" : "Sign Up" }</h1>
         {!isSignInForm && <input type="text" onChange={(e)=>{setName(e.target.value)}} value={name} placeholder="Enter You Name..." className="px-3 py-2 m-2 w-full bg-gray-600 placeholder:font-semibold" required />}
         <input type="text" onChange={(e)=>{setEmail(e.target.value)}} value={email} placeholder="Enter Your Email..." className="px-3 py-2 my-3 w-full bg-gray-600 placeholder:font-semibold" required />
         {!showPassword ? <VscEye className={isSignInForm ? "relative top-10 left-[120px] text-xl cursor-pointer" : "absolute top-[355px] ml-[230px] text-xl cursor-pointer" } onClick={handleShowPassword} /> : <VscEyeClosed className={isSignInForm ? "relative top-10 left-[120px] text-xl cursor-pointer" : "absolute top-[355px] ml-[230px] text-xl cursor-pointer" } onClick={handleShowPassword} /> }
         <input type={!showPassword ? "password" : "text"} onChange={(e)=>{setPassword(e.target.value)}} value={password} placeholder="Enter Password..." className="px-3 py-2 my-3 w-full bg-gray-600 placeholder:font-semibold" required />
-        <button className="p-3 my-6 bg-red-600 rounded-lg w-full font-semibold text-xl" onClick={isLogin}>{isSignInForm ? "Sign In" : "Sign Up"}</button>
+        <button className="p-3 my-6 bg-red-600 rounded-lg w-full font-semibold text-xl" onClick={handleButtonClick}>{isSignInForm ? "Sign In" : "Sign Up"}</button>
         <p className="p-4 mr-auto text-lg text-gray-400 font-semibold" >{isSignInForm ? "New to Netflix?" : "Already Registred" } <span onClick={toggleSignUpForm} className="text-white cursor-pointer hover:underline font-bold"> { isSignInForm ? "Sign Up Now" : "Sign In Now" }</span></p>
       </form>
     </div>
@@ -59,3 +75,46 @@ function AdminLogin() {
 }
 
 export default AdminLogin
+
+// import React, { useState } from 'react'
+// import '../styles/AdminSignUp.css'
+// import axios from 'axios'
+// const AdminSignUp = () => {
+//     let [email,setEmail] = useState("")
+//     let [password,setPassword] = useState("")
+//     let [name,setname] = useState("")
+//     let [phone,setPhone] = useState("")
+
+//    let data =  {name,password,phone,email}
+
+//     function addAdmin(){
+//         axios.post('http://localhost:1000/Admin',data)
+//         .then((res)=>{
+//             console.log(res);
+//             alert("Admin Creates Sucessfull")
+//         })
+//         .catch((err)=>{
+//             console.log(err);
+//             alert("Invalid Data ")            
+//         })
+//     }
+//   return (
+//     <div className='AdminSignUp'>
+//         <div className="bg_img"></div>
+//         <form onSubmit={addAdmin} action="">
+//             <label htmlFor="">Name :</label>
+//             <input type="text" value={name} 
+//             onChange={(e)=>{setname(e.target.value)}} placeholder='Enter the Name' />
+//             <label htmlFor="">Email :</label>
+//             <input type="email" value={email} 
+//             onChange={(e)=>{setEmail(e.target.value)}} placeholder='Enter the Email' />
+//             <label htmlFor="">Password :</label>
+//             <input type="password" value={password} 
+//             onChange={(e)=>{setPassword(e.target.value)}} placeholder='Enter the Password' />
+//             <label htmlFor="">Phone :</label>
+//             <input pattern='[0-9]{10}' value={phone} 
+//             onChange={(e)=>{setPhone(e.target.value)}} type="tel" placeholder='Enter the Phone' />
+//             <button  className='btn btn-primary'>SignUp</button>
+//         </form>
+//     </div>
+//   )
