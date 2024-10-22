@@ -25,6 +25,12 @@
       "name": "bhargav",
       "email": "bhargav@gmail.com",
       "password": "bhargav123"
+    },
+    {
+      "id": "42a3",
+      "name": "user",
+      "email": "user@gmail.com",
+      "password": "user123"
     }
   ]
 }
