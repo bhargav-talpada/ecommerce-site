@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { VscEye, VscEyeClosed } from 'react-icons/vsc';
 function AdminLogin() {
-  
+  off
   const [name, setName] = useState('')
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
