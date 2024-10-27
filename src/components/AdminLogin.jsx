@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { VscEye, VscEyeClosed } from 'react-icons/vsc';
-off
+
 function AdminLogin() {
   
   const [name, setName] = useState('')
