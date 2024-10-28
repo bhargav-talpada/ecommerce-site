@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { VscEye, VscEyeClosed } from 'react-icons/vsc';
+import { useNavigate } from 'react-router-dom';
 
 function AdminLogin() {
   
@@ -10,6 +11,8 @@ function AdminLogin() {
   const [showPassword, setShowPassword] = useState(false);
   const [admin, setAdmin] = useState('')
   const [isSignInForm, setIsSignInForm] = useState(true);
+  
+  let navigate = useNavigate();
 
   // console.log(email);
   // console.log(password);
@@ -54,6 +57,7 @@ function AdminLogin() {
       })
       if(login.length > 0){
         alert('Login Successfully...');
+        navigate('/adminhomepage');
       }
       else{
         alert('Something went wrong...');
