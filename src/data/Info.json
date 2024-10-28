@@ -17,6 +17,12 @@
       "name": "roank",
       "email": "ronak@gmail.com",
       "password": "ronak2010"
+    },
+    {
+      "id": "c90e",
+      "name": "vivek",
+      "email": "vivek@gmail.com",
+      "password": "vivek@123"
     }
   ],
   "User": [
