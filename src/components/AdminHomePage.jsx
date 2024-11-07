@@ -8,7 +8,7 @@ import AdminFooter from "./AdminFooter";
 
 function AdminHomePage() {
   return (
-    <div className="">
+    <div className="h-screen bg-black text-white flex flex-col justify-between">
       <AdminNavBar />
         <Routes>
           <Route path="/" element={<AdminDashBoard />} />

@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { VscEye, VscEyeClosed } from 'react-icons/vsc';
 import { useNavigate } from 'react-router-dom';
-off
+
 function AdminLogin() {
   
   const [name, setName] = useState('')
@@ -56,7 +56,7 @@ function AdminLogin() {
         return (x.email == email, x.password == password)
       })
       if(login.length > 0){
-        alert('Login Successfully...');
+        // alert('Login Successfully...');
         navigate('/adminhomepage');
       }
       else{
