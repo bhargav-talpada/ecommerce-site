@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { VscEye, VscEyeClosed } from 'react-icons/vsc';
 import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 function AdminLogin() {
   
@@ -56,11 +57,29 @@ function AdminLogin() {
         return (x.email == email, x.password == password)
       })
       if(login.length > 0){
-        // alert('Login Successfully...');
+        toast.success("Login Sucessfull", {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
         navigate('/adminhomepage');
       }
       else{
-        alert('Something went wrong...');
+        toast.error("Invalid Credentials", {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+          });
       }
     }
   };

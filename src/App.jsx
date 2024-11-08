@@ -12,7 +12,7 @@ function App() {
           <Route path="/" element={<Landing />} />
           <Route path="/admin" element={<AdminLogin />} />
           <Route path="/user" element={<UserLogin />} />
-          <Route path="/adminhomepage" element={<AdminHomePage />} />
+          <Route path="/adminhomepage/*" element={<AdminHomePage />} />
         </Routes>
       </BrowserRouter>
     </div>

@@ -39,5 +39,24 @@
       "password": "user123"
     }
   ],
-  "Product": []
+  "Product": [
+    {
+      "id": "6f30",
+      "category": "Mobile",
+      "rating": "4.5",
+      "price": "25000",
+      "name": "Moto Edge 50 Fusion",
+      "image": "https://mobiletelco.in/wp-content/uploads/2024/05/motorola-edge-50-fusion.webp",
+      "desc": "Curved edges, smooth contours, seamless camera housing, and the ultra-thin design of motorola edge 50 fusion\ngives you a premium tactile experience. Choose between Hot Pink in a vegan suede or Marshmallow Blue\nin a vegan leather finish, or go with a sophisticated and smooth matte finish in Forest Blue."
+    },
+    {
+      "id": "e94f",
+      "category": "Mobile Accessories",
+      "rating": "4.4",
+      "price": "2000",
+      "name": "Moto Edge 50 Fusion Back Cover",
+      "image": "https://m.media-amazon.com/images/I/51GLtNAHP1L._AC_UF1000,1000_QL80_.jpg",
+      "desc": "Mr. Case Liquid Silicone Case for Motorola Moto Edge 50 Fusion | Comfort Grip Soft Touch Matte TPU | - Black"
+    }
+  ]
 }
