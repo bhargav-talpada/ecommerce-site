@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
+import { MdStars } from 'react-icons/md';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
@@ -43,24 +44,18 @@ function editPage(id){
 }
 
   return (
-    <div>
+    <div className='flex space-x-9 overflow-x-auto overflow-y-hidden scroll-smooth'>
       {products.map((product)=>{
         return(
-          <div className="sub_items">
-            <div className='card1'>
-              <div className='thumbnail'>
-                <img src={product.image} alt="" />
-                </div>
-                <div className='descriptions'>
-            <h3>{product.name}</h3>
-            <span>M.R.P :{product.price}</span>
-            <p>Description : {product.desc}</p>
-            <span>Ratings : <b>{product.rating}*</b></span>
-            <br/>
-            <button onClick={()=>{editPage(product.id)}} className='m-3 btn btn-warning'>Update</button>
-            <button onClick={()=> {deleteProduct(product.id,product.name)}} className='m-3 btn btn-danger'>Delete</button>
-           {/* {console.log(product.id)} */}
-           </div>
+          <div data-testid="resCard" className="mt-8 w-64 h-auto  rounded-md" >
+            <img src={product.image} className=" cart-img rounded-xl w-full h-44" />
+            <h3 className="font-bold mt-3 ml-4 text-xl">{product.name}</h3>
+            <h4 className="flex items-center ml-4 text-lg"><MdStars className="text-2xl text-green-600 mr-1" /> {product.rating}  </h4>
+            <h4 className="my-1 font-semibold ml-4 text-lg">{product.price}/-</h4> {/* ₹ = ctrl + alt + 4 */}
+            <h4 className="my-1 text-gray-500 font-semibold ml-4 text-lg w-full">{product.desc}</h4>
+            <div className='flex justify-evenly items-center'>
+              <button onClick={()=>{editPage(product.id)}} className='p-3 my-6 bg-green-600 rounded-lg font-semibold text-xl'>Update</button>
+              <button onClick={()=> {deleteProduct(product.id,product.name)}} className='p-3 my-6 bg-red-600 rounded-lg font-semibold text-xl'>Delete</button>
             </div>
           </div>
         )

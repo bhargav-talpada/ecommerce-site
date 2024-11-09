@@ -11,9 +11,9 @@ function AdminNavBar() {
         </h1>
       </div>
       <div className="w-80 flex justify-evenly items-center">
-        <Link to="/adminhomepage/addproducts">Add Items</Link>
-        <Link to="/adminhomepage/viewproducts">ViewProducts</Link>
-        <Link to="/adminhomepage/viewCart">Cart</Link>
+        <Link to="/adminhomepage/addproducts" className="text-lg font-semibold ">Add Items</Link>
+        <Link to="/adminhomepage/viewproducts" className="text-lg font-semibold ">ViewProducts</Link>
+        <Link to="/adminhomepage/viewCart" className="text-lg font-semibold ">Cart</Link>
       </div>
       <div className="account">
         <AdminAccount />

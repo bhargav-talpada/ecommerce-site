@@ -41,22 +41,31 @@
   ],
   "Product": [
     {
-      "id": "6f30",
       "category": "Mobile",
-      "rating": "4.5",
-      "price": "25000",
       "name": "Moto Edge 50 Fusion",
+      "price": "24000",
       "image": "https://mobiletelco.in/wp-content/uploads/2024/05/motorola-edge-50-fusion.webp",
-      "desc": "Curved edges, smooth contours, seamless camera housing, and the ultra-thin design of motorola edge 50 fusion\ngives you a premium tactile experience. Choose between Hot Pink in a vegan suede or Marshmallow Blue\nin a vegan leather finish, or go with a sophisticated and smooth matte finish in Forest Blue."
+      "rating": "4.7",
+      "desc": "Moto Edge 50 Fusion Curved edges, smooth contours, seamless camera housing.",
+      "id": "6f30"
     },
     {
-      "id": "e94f",
       "category": "Mobile Accessories",
-      "rating": "4.4",
-      "price": "2000",
       "name": "Moto Edge 50 Fusion Back Cover",
+      "price": "500",
       "image": "https://m.media-amazon.com/images/I/51GLtNAHP1L._AC_UF1000,1000_QL80_.jpg",
-      "desc": "Mr. Case Liquid Silicone Case for Motorola Moto Edge 50 Fusion | Comfort Grip Soft Touch Matte TPU | - Black"
+      "rating": "4.5",
+      "desc": "Mr. Case Liquid Silicone Case | Comfort Grip Soft Touch Matte TPU | - Black",
+      "id": "e94f"
+    },
+    {
+      "category": "Electronics",
+      "name": "Fridge LG",
+      "price": "60000",
+      "image": "data:image/jpeg;base64,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",
+      "rating": "4.5",
+      "desc": "best LG fridge, Five star, less power consumtion",
+      "id": "104f"
     }
   ]
 }
