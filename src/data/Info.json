@@ -66,6 +66,15 @@
       "rating": "4.5",
       "desc": "best LG fridge, Five star, less power consumtion",
       "id": "104f"
+    },
+    {
+      "id": "868c",
+      "category": "Dress Matierirals",
+      "rating": "3",
+      "price": "500",
+      "name": "Man's Kurta",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSp0TAp2GosfNBeY6XAIJXhKpEx309YUA2LPQ&s",
+      "desc": "Plain man silk nevy blur kurta"
     }
   ]
 }
